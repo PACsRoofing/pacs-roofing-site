@@ -27,36 +27,44 @@
     .topbar {
       background: linear-gradient(90deg, #0a0a0a 0%, #111827 100%);
       color: white;
-      padding: 10px 0; /* ↓ reduced from 25 */
+      padding: 8px 0;
     }
     .topbar-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 22px;
     }
     .brand img {
-      height: 180px; /* adjust between 170–250 if needed */
+      height: 185px;
       width: auto;
       display: block;
       filter: drop-shadow(0 8px 25px rgba(0,0,0,0.6));
     }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-left: 2px solid rgba(255,255,255,0.12);
+      padding-left: 18px;
+    }
     .brand-text h1 {
       margin: 0;
-      font-size: 30px;
-      line-height: 1.1;
+      font-size: 34px;
+      line-height: 1.05;
       color: white;
     }
     .brand-text p {
-      margin: 4px 0 0;
-      color: #cbd5e1;
-      font-size: 14px;
+      margin: 6px 0 0;
+      color: #d1d5db;
+      font-size: 15px;
+      letter-spacing: 0.3px;
     }
     .header-cta {
       display: flex;
