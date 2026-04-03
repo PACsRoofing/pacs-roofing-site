@@ -1,19 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PACS Roofing</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PACS Roofing | League City Roofing Company</title>
+  <meta
+    name="description"
+    content="PACS Roofing provides residential roof inspections, storm damage support, roof replacement, and insurance-related roofing services in League City and surrounding areas."
+  />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111827;
+      background: #f8fafc;
+      line-height: 1.5;
+    }
+    a { text-decoration: none; }
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .topbar {
+      background: #0f172a;
+      color: white;
+      padding: 14px 0;
+    }
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand img {
+      height: 60px;
+      width: auto;
+      display: block;
+      background: white;
+      border-radius: 8px;
+      padding: 4px;
+    }
+    .brand-text h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.1;
+      color: white;
+    }
+    .brand-text p {
+      margin: 4px 0 0;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+    .header-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+    .btn-primary {
+      background: #dc2626;
+      color: white;
+    }
+    .btn-secondary {
+      background: white;
+      color: #111827;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
+      padding: 70px 0;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero h2 {
+      margin: 0 0 18px;
+      font-size: 48px;
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 20px;
+      color: #dbeafe;
+      margin: 0 0 28px;
+      max-width: 700px;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .badge {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .hero-card {
+      background: white;
+      color: #111827;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+    }
+    .hero-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+    .hero-card ul {
+      padding-left: 18px;
+      margin: 16px 0 0;
+    }
+    .hero-card li {
+      margin-bottom: 10px;
+    }
+    .section {
+      padding: 65px 0;
+    }
+    .section h3 {
+      margin-top: 0;
+      font-size: 34px;
+      text-align: center;
+    }
+    .section-intro {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 36px;
+      color: #475569;
+      font-size: 18px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(15,23,42,0.06);
+      border: 1px solid #e2e8f0;
+    }
+    .card h4 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+    .card p {
+      margin: 0;
+      color: #475569;
+    }
+    .dark {
+      background: #e2e8f0;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .step {
+      background: white;
+      border-left: 5px solid #dc2626;
+      border-radius: 10px;
+      padding: 22px;
+      box-shadow: 0 8px 20px rgba(15,23,42,0.06);
+    }
+    .step strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .service-area-box {
+      background: #0f172a;
+      color: white;
+      border-radius: 16px;
+      padding: 30px;
+      text-align: center;
+    }
+    .service-area-box p {
+      margin: 10px 0 0;
+      color: #cbd5e1;
+      font-size: 18px;
+    }
+    .contact {
+      background: white;
+      border-top: 4px solid #dc2626;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 10px 25px rgba(15,23,42,0.07);
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .contact h3 {
+      margin-top: 0;
+      text-align: center;
+    }
+    .contact p {
+      color: #475569;
+      font-size: 18px;
+    }
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 22px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+    @media (max-width: 980px) {
+      .hero-grid,
+      .cards,
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero h2 {
+        font-size: 38px;
+      }
+    }
+    @media (max-width: 640px) {
+      .hero-grid,
+      .cards,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+      .brand {
+        align-items: flex-start;
+      }
+      .hero {
+        padding: 50px 0;
+      }
+      .hero h2 {
+        font-size: 32px;
+      }
+      .hero p {
+        font-size: 18px;
+      }
+      .brand img {
+        height: 52px;
+      }
+    }
+  </style>
 </head>
-<body style="font-family: Arial; text-align: center; padding: 50px;">
+<body>
 
-  <h1>PACS Roofing</h1>
-  <p>Patriot Asset & Construction Services</p>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img src="logo.png" alt="PACS Roofing Logo">
+        <div class="brand-text">
+          <h1>PACS Roofing</h1>
+          <p>Patriot Asset & Construction Services</p>
+        </div>
+      </div>
+      <div class="header-cta">
+        <a class="btn btn-secondary" href="tel:7134097147">Call 713-409-7147</a>
+        <a class="btn btn-primary" href="mailto:info@pacsroofing.com">Free Inspection</a>
+      </div>
+    </div>
+  </header>
 
-  <h2>Free Roof Inspections</h2>
-  <p>Storm Damage | Insurance Claims | Full Replacements</p>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badges">
+          <span class="badge">Residential Roofing</span>
+          <span class="badge">Storm Damage Support</span>
+          <span class="badge">League City Local</span>
+        </div>
+        <h2>Roof inspections, storm damage support, and roof replacement done right.</h2>
+        <p>
+          PACS Roofing helps homeowners in League City and surrounding communities
+          with residential roof inspections, storm-related roof damage, and full
+          roof replacement with clear communication from start to finish.
+        </p>
+        <div class="header-cta">
+          <a class="btn btn-primary" href="tel:7134097147">Call Now</a>
+          <a class="btn btn-secondary" href="mailto:info@pacsroofing.com">Request Inspection</a>
+        </div>
+      </div>
 
-  <p><strong>Call Now:</strong> (713) XXX-XXXX</p>
+      <div class="hero-card">
+        <h3>Why homeowners call PACS Roofing</h3>
+        <ul>
+          <li>Fast scheduling for roof inspections</li>
+          <li>Professional communication and organized project flow</li>
+          <li>Storm damage and insurance-related roofing support</li>
+          <li>Local company serving League City and nearby cities</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h3>Our Services</h3>
+      <p class="section-intro">
+        We are focused on residential roofing and homeowner support before, during,
+        and after the inspection and replacement process.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h4>Roof Inspections</h4>
+          <p>Visual roof inspections for storm damage, wear, and replacement needs.</p>
+        </div>
+        <div class="card">
+          <h4>Roof Replacement</h4>
+          <p>Full residential roof replacement with disciplined project coordination.</p>
+        </div>
+        <div class="card">
+          <h4>Storm Damage</h4>
+          <p>Support for hail and wind-related roofing concerns across the Gulf Coast area.</p>
+        </div>
+        <div class="card">
+          <h4>Insurance Support</h4>
+          <p>Structured communication and documentation for insurance-related roofing projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark">
+    <div class="container">
+      <h3>How It Works</h3>
+      <p class="section-intro">
+        We keep the process simple, visible, and easy for homeowners to follow.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <strong>1. Call or Message</strong>
+          Reach out to schedule a roof inspection.
+        </div>
+        <div class="step">
+          <strong>2. Property Inspection</strong>
+          We inspect the roof and document visible conditions.
+        </div>
+        <div class="step">
+          <strong>3. Review Next Steps</strong>
+          We discuss findings, options, and project path.
+        </div>
+        <div class="step">
+          <strong>4. Complete the Job</strong>
+          We coordinate the roofing project through completion.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-area-box">
+        <h3>Service Area</h3>
+        <p>
+          League City, Kemah, Dickinson, Friendswood, Seabrook, Webster,
+          Clear Lake, Bacliff, and nearby Gulf Coast communities.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact">
+        <h3>Request a Free Roof Inspection</h3>
+        <p>
+          Call PACS Roofing to schedule an inspection or discuss storm-related roofing concerns.
+        </p>
+        <div class="contact-links">
+          <a class="btn btn-primary" href="tel:7134097147">Call 713-409-7147</a>
+          <a class="btn btn-secondary" href="mailto:info@pacsroofing.com">info@pacsroofing.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      PACS Roofing | Patriot Asset & Construction Services | League City, Texas
+    </div>
+  </footer>
 
 </body>
 </html>
